@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f2f2f2, #e6e6e6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.video-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 80%;
+    max-height: 80%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+    transform: scale(1.05);
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #333;
+}
+
+.password-prompt {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+.password-prompt input {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.password-prompt button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.password-prompt button:hover {
+    background-color: #0056b3;
+}
+
+#lockedVideoContainer {
+    position: relative;
+}
+
+#lockedVideoContainer::before {
+    content: '🔒';
+    font-size: 5em;
+    color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+#lockedVideo {
+    opacity: 0.5;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0;
+    background-color: #007BFF;
+    transition: width 0.3s ease;
+}
+
+.checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.checkmark.show {
+    opacity: 1;
+}

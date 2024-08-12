@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="login-background">
+
+<div class="login-page">
+    <div class="login-container">
+        <h2>Logează-te</h2>
+        <p>SUCCES</p>
+
+        <form onsubmit="event.preventDefault(); validateLogin();">
+            <div class="imgcontainer">
+                <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Numele</b></label>
+                <input type="text" placeholder="Introdu Numele" id="uname" required title="Enter your username" aria-label="Username">
+
+                <label for="psw"><b>Parola</b></label>
+                <input type="password" placeholder="Introdu Parola" id="psw" required title="Enter your password" aria-label="Password">
+                <button type="button" id="togglePassword">Arată/Ascunde Parola</button>
+
+                <button type="submit">Află secretul</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" aria-label="Remember me"> Nu mă uita...
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Poem Section -->
+<div class="poem-page">
+    <div class="poem-container" id="poem">
+        <h3>Dedicated Poem</h3>
+        <p id="poem-content">
+            Roses are red,<br>
+            Violets are blue,<br>
+            This poem is dedicated,<br>
+            Just for you.
+        </p>
+    </div>
+</div>
+
+<!-- Hint Bubbles -->
+<div id="username-hint" class="hint">
+    <span id="username-hint-text"></span>
+    <span class="close-btn" onclick="closeHint('username-hint')">&times;</span>
+</div>
+
+<div id="password-hint" class="hint">
+    <span id="password-hint-text"></span>
+    <span class="close-btn" onclick="closeHint('password-hint')">&times;</span>
+</div>
+
+<div id="loading" class="loading-dots" style="display: none;">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</div>
+
+<div id="blur-overlay" class="blur-overlay" style="display: none;"></div>
+
+<audio id="background-music" src="your-music-file.mp3" loop></audio>
+
+<script src="scripts.js"></script>
+</body>
+</html>

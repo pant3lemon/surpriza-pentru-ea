@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adevarul</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+</head>
+<body>
+
+<div class="video-container">
+    <h2>Vizionare plăcută!</h2>
+    <video id="myVideo" controls aria-label="Main Video">
+        <source src="videoplayback.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<div id="lockedVideoContainer" class="video-container" style="display: none;">
+    <h2>Locked Video</h2>
+    <video id="lockedVideo" controls aria-label="Locked Video">
+        <source src="videoplayback.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="progress-bar-container">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+</div>
+
+<div id="passwordPrompt" class="password-prompt" aria-label="Password Prompt">
+    <h3>Introdu Parola...</h3>
+    <p>...pentru...</p>
+    <p>...cea mai importantă parte</p>
+    <input type="password" id="passwordInput" placeholder="Dăi foială..." aria-label="Password Input">
+    <button onclick="checkPassword()">Incearcă</button>
+    <p id="passwordCounter">0/4</p>
+</div>
+
+<audio id="backgroundMusic" loop>
+    <source src="undefined.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<script src="scripts2.js"></script>
+</body>
+</html>
